@@ -7,6 +7,9 @@ const routeOrderDetail = require("./routeOrderDetail")
 // const brandRouter = require('./brands')
 // const productDetailRouter = require("../app/controller/products/productdetail")
 const innitRoute = (app) => {
+    app.get("/", (res) => {
+        res.json({ message: "success" })
+    })
     app.use("/", routeUser)
     app.use('/product', routerProduct)
     app.use('/gallery', routeGallery)
